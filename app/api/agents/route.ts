@@ -44,7 +44,6 @@ export async function GET() {
       capabilities: ["reminders", "tracking", "automation"],
     },
   ]
-  console.log("TWILIO_ACCOUNT_SID:", process.env.TWILIO_ACCOUNT_SID);
 
 
   return NextResponse.json({ agents })

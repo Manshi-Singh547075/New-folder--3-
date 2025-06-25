@@ -443,7 +443,6 @@ if (match) {
     throw err
   }
 }
-console.log("TWILIO_ACCOUNT_SID:", process.env.TWILIO_ACCOUNT_SID);
 
 
       // Add new task

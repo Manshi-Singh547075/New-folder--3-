@@ -102,8 +102,8 @@ export default function LandingPage() {
               <Zap className="w-8 h-8 text-white animate-lightning" />
             </div>
           </div>
-          <h1 className="text-8xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent animate-text-shimmer">
-            OmniSymphony
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent animate-text-shimmer py-10px">
+            AgentSymphony
           </h1>
         </div>
 
@@ -232,6 +232,149 @@ export default function LandingPage() {
           <Cpu className="w-8 h-8 text-cyan-400 animate-spin-slow" />
         </div>
       </div>
+
+      {/* Enhanced Animated Footer */}
+      <footer className="relative z-10 mt-32 border-t border-slate-700/50 bg-slate-900/80 backdrop-blur-lg">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-slate-900/10"></div>
+        <div className="relative max-w-6xl mx-auto px-4 py-16">
+          {/* Footer Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0ms' }}>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center animate-glow">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  AgentSymphony
+                </h3>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                Revolutionizing AI agent orchestration with seamless multi-agent coordination and natural language processing.
+              </p>
+              <div className="flex space-x-4">
+                {[
+                  { icon: Globe, href: "#", delay: 100 },
+                  { icon: MessageSquare, href: "#", delay: 200 },
+                  { icon: Code, href: "#", delay: 300 }
+                ].map((social, index) => (
+                  <button
+                    key={index}
+                    className="w-10 h-10 bg-slate-800/50 hover:bg-blue-600/20 border border-slate-700/50 hover:border-blue-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group animate-bounce-in"
+                    style={{ animationDelay: `${social.delay}ms` }}
+                  >
+                    <social.icon className="w-4 h-4 text-slate-400 group-hover:text-blue-400 transition-colors" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Product Links */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '200ms' }}>
+              <h4 className="text-lg font-semibold text-white mb-4">Product</h4>
+              {[
+                { name: "Features", href: "#features" },
+                { name: "Pricing", href: "#pricing" },
+                { name: "Documentation", href: "#docs" },
+                { name: "API Reference", href: "#api" }
+              ].map((link, index) => (
+                <button
+                  key={index}
+                  className="block text-slate-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-2 transform"
+                  style={{ animationDelay: `${index * 50 + 400}ms` }}
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Company Links */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '400ms' }}>
+              <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+              {[
+                { name: "About Us", href: "#about" },
+                { name: "Careers", href: "#careers" },
+                { name: "Blog", href: "#blog" },
+                { name: "Press Kit", href: "#press" }
+              ].map((link, index) => (
+                <button
+                  key={index}
+                  className="block text-slate-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-2 transform"
+                  style={{ animationDelay: `${index * 50 + 600}ms` }}
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Newsletter Signup */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '600ms' }}>
+              <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+              <p className="text-slate-400 text-sm mb-4">
+                Get the latest updates on AI agent orchestration and new features.
+              </p>
+              <div className="space-y-3">
+                <div className="relative group">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-slate-800/70 transition-all duration-300 group-hover:border-slate-600/50"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  <span className="relative flex items-center justify-center">
+                    Subscribe
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="border-t border-slate-700/50 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 animate-slide-up" style={{ animationDelay: '800ms' }}>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+              <p className="text-slate-400 text-sm">
+                © 2025 AgentSymphony. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((link, index) => (
+                  <button
+                    key={index}
+                    className="text-slate-500 hover:text-slate-300 text-sm transition-colors duration-300"
+                  >
+                    {link}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Status Indicator */}
+            <div className="flex items-center space-x-2 group">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-slate-400 text-sm group-hover:text-green-400 transition-colors">
+                All systems operational
+              </span>
+            </div>
+          </div>
+
+          {/* Floating Elements in Footer */}
+          <div className="absolute top-4 right-4 opacity-20">
+            <Bot className="w-6 h-6 text-purple-400 animate-float-icon" />
+          </div>
+          <div className="absolute bottom-4 left-4 opacity-20">
+            <Network className="w-5 h-5 text-blue-400 animate-twinkle" />
+          </div>
+        </div>
+
+        {/* Footer Background Animation */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-float-slow-complex"></div>
+          <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float-delayed-complex"></div>
+        </div>
+      </footer>
 
       <style jsx>{`
         @keyframes grid-move {
